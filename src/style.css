@@ -1,0 +1,177 @@
+*,
+* ::after,
+* ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --color-btn: #219f95;
+  --color-heading: #234894;
+  --color-badge: #afcedd;
+  --color-badge-number: #234894;
+  --color-date: #696969;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* body {
+  margin: 5rem 2rem;
+} */
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.card {
+  max-width: 300px;
+}
+
+.block-plan {
+  display: grid;
+  gap: 2rem 3rem;
+  /* justify-content: center; */
+  margin: 2rem;
+}
+
+.title {
+  padding: 2.5rem 4rem;
+}
+
+.card__container {
+  padding: 0.8rem 0.8rem;
+}
+
+.card__header {
+  margin-bottom: 0.5rem;
+}
+
+.card__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__badge {
+  display: inline-block;
+  color: var(--color-badge-number);
+  background-color: var(--color-badge);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.card__info {
+  font-size: 1rem;
+  color: var(--color-heading);
+  font-weight: 400;
+}
+
+.card__date {
+  color: var(--color-date);
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.card__id {
+  color: var(--color-date);
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.card__image {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background: url(/assets/images/avatar-1.jpg) no-repeat center;
+  background-size: cover;
+  width: 22px;
+  height: 24px;
+}
+
+.card__user {
+  display: flex;
+  align-items: center;
+}
+
+.card__description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+.card__username {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.btn {
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: var(--color-btn);
+  color: #fff;
+  border: none;
+  padding: 12px 10px;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .block-plan {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5rem auto;
+  }
+  .title {
+    font-size: 2.2rem;
+    padding: 4rem 13rem;
+  }
+  .card__info {
+    font-size: 1.6rem;
+  }
+  .card__type {
+    font-size: 1.8rem;
+  }
+  .card__id,
+  .card__date {
+    font-size: 1.2rem;
+  }
+  .card__username {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .block-plan {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem 10rem;
+  }
+  .title {
+    font-size: 1.8rem;
+    padding: 3rem 11rem;
+  }
+  .card__info {
+    font-size: 1.3rem;
+  }
+  .card__type {
+    font-size: 1.5rem;
+  }
+  .card__id,
+  .card__date {
+    font-size: 1rem;
+  }
+  .card__username {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .btn {
+    font-size: 1.3rem;
+  }
+}
